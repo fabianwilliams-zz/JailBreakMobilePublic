@@ -55,9 +55,9 @@ namespace jbb
 			api = new untappedApi("untappd",new untappdAuthenticator(
 				"https://untappd.com/oauth/authenticate",
 				"https://untappd.com/oauth/authorize",
-				"https://adotob.auth0.com/login/callback",
-				"C863AC5D23A4208ADFF983D3A2A389715D1C5DAE",
-				"8AD653F4794081016B42659B799662C1361A0FC5"));
+				"YOUR UntappD Authorization EndPoint with",
+				"Client ID",
+				"Client Secret"));
 
 			var userTokenLabel = new Label ();
 			var checkInReply = new Label ();
