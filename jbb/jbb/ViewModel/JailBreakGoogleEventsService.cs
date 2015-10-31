@@ -21,8 +21,8 @@ namespace jbb
 			var client = new System.Net.Http.HttpClient ();
 			var requestMessage = new HttpRequestMessage()
 			{
-				//RequestUri = new Uri("https://www.googleapis.com/calendar/v3/calendars/q1k3ll0bdkis2ceef447rthocs@group.calendar.google.com/events?key=AIzaSyAHLnznypEgj3IAWmDe04XCBpSqgKhikP4"),
-				RequestUri = new Uri("https://www.googleapis.com/calendar/v3/calendars/jailbreakbrewing.com_gqdh070qj7ajjt6rmas6ca5ju0@group.calendar.google.com/events?key=AIzaSyAHLnznypEgj3IAWmDe04XCBpSqgKhikP4"),
+				
+				RequestUri = new Uri("YOUR URI END POINT FOR WEB API FOR GOOGLE CALENDAR"),
 				Method = HttpMethod.Get,
 			};
 
@@ -41,7 +41,7 @@ namespace jbb
 			var client = new System.Net.Http.HttpClient ();
 			var requestMessage = new HttpRequestMessage()
 			{
-				RequestUri = new Uri("https://www.googleapis.com/calendar/v3/calendars/jailbreakbrewing.com_upiufesmmavkpud9t448q9i4q4@group.calendar.google.com/events?key=AIzaSyAHLnznypEgj3IAWmDe04XCBpSqgKhikP4"),
+				RequestUri = new Uri("YOUR URI END POINT FOR WEB API FOR GOOGLE CALENDAR"),
 				Method = HttpMethod.Get,
 			};
 
