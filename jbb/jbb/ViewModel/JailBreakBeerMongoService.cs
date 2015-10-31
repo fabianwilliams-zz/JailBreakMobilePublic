@@ -18,12 +18,12 @@ namespace jbb
 			var client = new System.Net.Http.HttpClient ();
 			var requestMessage = new HttpRequestMessage()
 			{
-				RequestUri = new Uri("https://fabianooc.azure-api.net/breakin/Beer"),
+				RequestUri = new Uri("YOUR URI END POINT FOR WEB API"),
 				Method = HttpMethod.Get,
 			};
 
 			requestMessage.Headers.Add("Ocp-Apim-Trace", "true");
-			requestMessage.Headers.Add("Ocp-Apim-Subscription-Key", "dfda3434dd624baaa88f7e6fada83524");
+			requestMessage.Headers.Add("Ocp-Apim-Subscription-Key", "YOUR KEY HERE");
 
 			var response = await client.SendAsync (requestMessage);
 			var beerJson = "{\"beers\":" + response.Content.ReadAsStringAsync().Result + "}";
@@ -43,13 +43,13 @@ namespace jbb
 
 			var requestMessage = new HttpRequestMessage()
 			{
-				RequestUri = new Uri("https://fabianooc.azure-api.net/breakin/GetWhatsOnTap"),
+				RequestUri = new Uri("YOUR URI END POINT FOR WEB API"),
 
 				Method = System.Net.Http.HttpMethod.Get,
 			};
 
 			requestMessage.Headers.Add("Ocp-Apim-Trace", "true");
-			requestMessage.Headers.Add("Ocp-Apim-Subscription-Key", "dfda3434dd624baaa88f7e6fada83524");
+			requestMessage.Headers.Add("Ocp-Apim-Subscription-Key", "YOUR API KEY");
 
 			var response = await client.SendAsync (requestMessage);
 			var beerJson = "{\"beers\":" + response.Content.ReadAsStringAsync().Result + "}";
