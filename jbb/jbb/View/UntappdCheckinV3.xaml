@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="jbb.UntappdCheckinV3"
+             BackgroundColor="{StaticResource bgColor}"
+             Padding="{StaticResource gridPadding}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="accentColor">#ffcc00</Color>
+            <Color x:Key="bgColor">#f4efe2</Color>
+            <Color x:Key="highlightBgColor">#f1e7cb</Color>
+            <Color x:Key="headerTextColor">#492c00</Color>
+            <Color x:Key="beerTitleBgColor">#FFFFFF</Color>
+            <Thickness x:Key="gridPadding">10,10,10,10</Thickness>
+            <x:Double x:Key="gridSpacing">10</x:Double>
+
+
+            <Style x:Key="largeText" TargetType="Label">
+                <Setter Property="Font" Value="Large" />
+                <Setter Property="TextColor" Value="{StaticResource headerTextColor}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+            <Style x:Key="normalText" TargetType="Label">
+                <Setter Property="Font" Value="Medium" />
+                <Setter Property="TextColor" Value="{StaticResource headerTextColor}" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+            </Style>
+
+            <Style x:Key="bigButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource accentColor}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="BorderRadius" Value="0" />
+            </Style>
+
+            <Style x:Key="socialButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#b9bec5" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="1" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid ColumnSpacing="{StaticResource gridSpacing}" RowSpacing="{StaticResource gridSpacing}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--  beer title  -->
+        <Grid BackgroundColor="{StaticResource beerTitleBgColor}" Padding="{StaticResource gridPadding}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+<!--
+            <BoxView x:Name="Logo"
+                     BackgroundColor="{StaticResource highlightBgColor}"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand" />-->
+
+<!--            <StackLayout Grid.Column="1" Orientation="Vertical">
+                <Label Style="{StaticResource largeText}">Curiosity Twelve</Label>
+                <Label Style="{StaticResource normalText}">Tree House Brewing Company</Label>
+
+            </StackLayout>-->
+
+        </Grid>
+
+        <!-- and button row -->
+<!--        <Button Grid.Row="1"
+                Style="{StaticResource bigButton}"
+                Text="ADD LOCATION" />-->
+
+        <!-- leave a note row -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="60" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Editor Grid.Column="0" />
+<!--            <Button Grid.Column="1"
+                    Style="{StaticResource bigButton}"
+                    Text="PHOTO" />-->
+        </Grid>
+
+        <!-- Rating row -->
+        <Frame Grid.Row="3"
+               BackgroundColor="{StaticResource highlightBgColor}"
+               HasShadow="False">
+            <Grid ColumnSpacing="{StaticResource gridSpacing}" RowSpacing="{StaticResource gridSpacing}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="AUTO" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       BackgroundColor="Transparent"
+                       Style="{StaticResource normalText}"
+                       XAlign="Center">
+                    What do you think? Rate this beer...
+                </Label>
+
+                <Slider Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="Fill" />
+                <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Style="{StaticResource largeText}">
+                    3.75
+                </Label>
+            </Grid>
+        </Frame>
+
+        <!-- Share row -->
+<!--        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="AUTO" />
+                <ColumnDefinition Width="AUTO" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0"
+                   HorizontalOptions="StartAndExpand"
+                   Style="{StaticResource largeText}"
+                   Text="SHARE THIS:"
+                   VerticalOptions="Center" />
+            <Button Grid.Column="1"
+                    Style="{StaticResource socialButton}"
+                    Text="T" />
+            <Button Grid.Column="2"
+                    Style="{StaticResource socialButton}"
+                    Text="F" />
+
+        </Grid>-->
+
+
+        <!-- confirm checkin row -->
+        <Button Grid.Row="5"
+                Style="{StaticResource bigButton}"
+                Text="CONFIRM CHECK-IN" />
+
+    </Grid>
+
+</ContentPage>

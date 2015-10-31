@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{CF1530D3-1E7D-4BE0-BFC3-71C9D219825C}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>jbb</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)jbb.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\BeerCarousel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\JBHomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\JBLaurelMap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\MeetOurPeople.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\JBTeam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\JBTeamApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\BeerListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\TodoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\BLCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\BLCellwImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\BeerDetail.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\ListofBeerCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Beer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\FoodTruckList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\JBEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\MeetOurFolks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\ConnectPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\MasterPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\ListOfBeerCell2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\WhatsOnTapPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\JailBreakBeerMongoService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\JailBreakGoogleEventsService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\JBEventsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\EventDetails.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\JBEventCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\UnTappdService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\UntappdCheckIn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\BeerListViewViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\UntappdCheckinV2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)View\UntappdCheckinV3.xaml.cs">
+      <DependentUpon>UntappdCheckinV3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)View\JBTeamAppV2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Helper\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
+    <Folder Include="$(MSBuildThisFileDirectory)View\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)View\UntappdCheckinV3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
