@@ -21,12 +21,7 @@ namespace jbb
 		OAuthApi api;
 		public UnTappdService ()
 		{
-//			api = new untappedApi("untappd",new untappdAuthenticator(
-//				"https://untappd.com/oauth/authenticate",
-//				"https://untappd.com/oauth/authorize",
-//				"https://adotob.auth0.com/login/callback",
-//				"C863AC5D23A4208ADFF983D3A2A389715D1C5DAE",
-//				"8AD653F4794081016B42659B799662C1361A0FC5"));
+
 		}
 
 		public async Task<OAuthAccount> GetUntappdTokenAsync()
